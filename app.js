@@ -37,6 +37,10 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
     document.querySelector(".dice").style.display = "none";
     document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
     document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
+
+    //Disable "hold" and "roll" buttons
+    document.querySelector(".btn-hold").disabled = true;
+    document.querySelector(".btn-roll").disabled = true;
   }
   else {
     nextPlayer();
@@ -67,6 +71,9 @@ function init() {
   document.querySelector(".player-1-panel").classList.remove("active");
 
   document.querySelector(".player-0-panel").classList.add("active");
+
+  document.querySelector(".btn-hold").disabled = false;
+  document.querySelector(".btn-roll").disabled = false;
 
 }
 
